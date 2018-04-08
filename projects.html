@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	  <link rel="stylesheet" type="text/css" href="stylesheets/mystyle.css" />
+	  <link rel="stylesheet" type="text/css" href="stylesheets/accordianStyle.css" />
+	  <title>Nick Chatlosh - Software Developer</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="resume.html">Resume</a></li>
+				</ul>
+			</nav>
+			<h1>Projects</h1>
+		</header>
+		<main>
+			<button class="accordian">C#</button>
+			<div class="panel">
+				<section>
+					<h2>WPF Currency Project</h2>
+					<img src="images/WPF_Currency.png" alt="WPF Currency"/>
+					<p>
+						This project was a demo/exercise for organizing multiple projects/libraries and building a WPF app using the MVVM design pattern. 
+						This project originally began as a simple Currency Library that leverages Object Oriented principles to create a library of abstracted 
+						coin objects in two different types of currencies (US and UK) in the same hierarchy. These coins are managed by Currency Repo Objects, 
+						leveraging the Repository design pattern. I have also created an ASP .NET MVC version of this currency management demo leveraging the same Currency Library. 
+						That project is in a separate repo. This project also includes unit tests using Visual Studio's built in testing framework.
+					</p>
+					<p class="CenterLink"><a href="https://github.com/NChatlosh/WPF_Currency_OOP_Project" target="_blank">Click here to see the code on Github</a></p>
+				</section>
+				<section>
+					<h2>ASP.Net MVC Currency Project</h2>
+					<img src="images/MVC_CurrencyBefore.png" alt="MVC Currency Before" class="MVC"/>
+					<img src="images/MVC_CurrencyAfter.png" alt="MVC Currency After" class="MVC"/>
+					<p>This is the ASP.Net MVC version of my WPF Currency project, using the very same library and unit tests. This screenshot was taken while using Chrome as the browser.</p>
+					<p class="CenterLink"><a href="https://github.com/NChatlosh/ASP.Net_MVC_Currency_OOP_Project" target="_blank">Click here to see the code on Github</a></p>
+				</section>
+				<section>
+					<h2>UWP Flash Cards Project</h2>
+					<img src="images/FlashCards_Main.png" alt="Flash Cards Main" class="FC"/>
+					<img src="images/FlashCards_Play.png" alt="Flash Cards Play" class="FC"/>
+					<img src="images/FlashCards_Edit.png" alt="Flash Cards Edit" class="FC"/>
+					<p>
+						This was one of my final projects last year for an OOP class. It is a simple UWP app that you can sue to create digital flash cards of three varieties: 
+						multiple choice, matching, and fill in the blank. You can save a grouping of cards into a set and save it to a JSON file. The app handles the serialization/deserialization
+						 of the JSON files. I'd like to add in the future a new image card type.
+					</p>
+					<p class="CenterLink"><a href="https://github.com/NChatlosh/FlashCards_UWP_APP" target="_blank">Click here to see the code on Github</a></p>
+				</section>
+			</div>
+			<button class="accordian">C++</button>
+			<div class="panel">
+				<section>
+					<h2>C++ Synthesizer Project</h2>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/eBKD8RMXzyA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<p>This is a digital synthesizer created with C++ and the SFML library. It relies on keyboard input events to both play notes and change the varying settings including 
+						an amplitude envelope, filter, LFO, and 3 oscillators. Although the latency is low, it is technically not playing in real time, instead it computes the audio signal before
+						 the note is actually played. It does this by first computing the oscillator data, then passing it through the amplitude envelope and then the filter and LFO are calculated 
+							 at the same time before finally being sent to the SFML audio buffer.
+					</p>
+					<p class="CenterLink"><a href="https://github.com/NChatlosh/CPP_Synthesizer" target="_blank">Click here to see the code on Github</a></p>
+				</section>
+				<section>
+					<h2>C++ Unreal Engine Drum Sequencer Project</h2>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/_BRjn-36qaM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<p>This project is a Drum Sequencer I made with Unreal Engine and C++. It allows the user to create tempo synced loops of audio using a variety of interchangeable samples. 
+ 						The user can also change the tempo, start/stop the loop, and change the rhythmic value of the notes from quarter notes to eighth notes to sixteenth notes. It also features a visual feedback on the pads 
+ 						themselves to show which are active and where the loop is at timewise. I was actually able to use Unreal Engine's built in global timer to calculate the actual tempo values so that it is accurate.
+ 					</p>
+				</section>
+			</div>
+			<button class="accordian">Web/Javascript</button>
+			<div class="panel">
+				<section>
+					<h2>FoodMe Web App</h2>
+					<img src="images/FM_Home.png" alt="Food Me Home" class="FM" />
+					<img src="images/FM_Dine.png" alt="Food Me Dine in" class="FM" />
+					<img src="images/FM_Estab.png" alt="Food Me Establishment" class="FM" />
+					<img src="images/FM_Cuisine.png" alt="Food Me Cuisine" class="FM" />
+					<img src="images/FM_Results.png" alt="Food Me Results" class="FM" />
+					<p>
+						This was a project I worked on in my capstone class at Columbia. I worked with a tema of artists, designers, and developers to build this simple web app, optimized
+						for both web and mobile. It allows users to choose from a variety of options to narrow down a search for a restaurant to eat it(or order delivery from). It includes options such as
+						estabishment type, cuisine/cultural type, budget, location, and many others. The user also gets the option to add in a zip code or use current location t o find restaurants nearby.
+						At any point, the user can click the FoodMe button, even if they added no input, and be taken to the results tab that will give the user a restaurant from a narrowed down list of restaurants near them.
+						The results tab also includes the location, ratings, and links to the menu and website information of the restaurant, all provided by Zomato. All options selected by the user is sent in a HTTP POST request
+						to the Zomato API with Javascript, where it is queried and a list of restaurants is returned in the form of JSON text. The app will then parse the JSON into restaurant objects and from there one is randomly selected.
+						If the user does not like the results, he or she can simply click the FoodMe button again and get a different result.
+					</p>
+					<p class="CenterLink"><a href="http://www.foodme.ml/" target="_blank">Click here to visit the live website</a></p>
+					<p class="CenterLink"><a href="https://github.com/NChatlosh/Food_Me" target="_blank">Click here to see the code on Github</a></p>
+				</section>
+			</div>
+			<button class="accordian">Python</button>
+			<div class="panel">
+				<section>
+					<h2>PyTorch Pitch Classifier</h2>
+					<img src="images/pitchClassifier.png" alt="Pitch Classifier Console" class="Pitch" />
+					<p>
+						This project makes use of the PyTorch machine learning library to create a simple DNN that learns to classify pitch from audio files. 
+						I have started out with a very simple set of audio files. Each is a half-second long, normalized, mono (1 channel), and consists of a single waveform. 
+						I used a variety of simple sine, sawtooth, triangle, and square waves generated from the operator synthesizer in Ableton Live. 
+						I first attempted to create the network using just numpy, but the math wasn't working out quite right and I wanted to create more sophisticated layers for future iterations. 
+						This network performs much better than expected and can produce the correct predictions veyr quickly. I plan on moving on to more detailed and sophisticated instrumetns and sounds for 
+						the next iteration on this project and try to push the limits, perhaps eventually moving onto stereo (2 channel) audio.
+					</p>
+					<p class="CenterLink"><a href="https://github.com/NChatlosh/PyTorch_Pitch_Classifier" target="_blank">Click here to see the code on Github</a></p>
+				</section>
+				<section>
+					<h2>Numpy XOR Neural Network</h2>
+					<img src="images/XOR.png" alt="XOR Network Console" class="Py" />
+					<p>
+						A very simple numpy implementation of a 3-layer Neural Network that learns a generic XOR pattern. 
+						Based off of <a href="http://iamtrask.github.io/2015/07/12/basic-python-network/" target="_blank">Trask's "A Neural Network in 11 lines of Python" blog post</a>.
+						This implementation is slightly different because I am using Stochastic Gradient Descent and Online Training to train the network one example at a time, each of which is randomly choosen. Although it takes
+						longer to train, it has much better results, yielding a smaller error at the end of training and generalzing better on test sets.
+					</p>
+					<p class="CenterLink"><a href="https://github.com/NChatlosh/XOR_Python_NN" target="_blank">Click here to see the code on Github</a></p>
+				</section>
+			</div>
+		</main>
+		<footer>
+	  		<p>&copy; Nicholas M. Chatlosh 2018</p>
+	  	</footer>
+	  	<script src="javascripts/PanelScript.js"></script>
+	</body>
+</html>
