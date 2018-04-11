@@ -1,4 +1,4 @@
-//got this code from W3schools: https://www.w3schools.com/howto/howto_js_accordion.asp
+//derived from W3schools: https://www.w3schools.com/howto/howto_js_accordion.asp
 	var accordian = document.getElementsByClassName("accordian");
 	var i;
 	for(i = 0; i < accordian.length; i++){
