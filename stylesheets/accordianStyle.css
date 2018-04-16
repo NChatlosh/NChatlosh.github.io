@@ -1,0 +1,111 @@
+main{
+	width: 80%;
+	margin: auto;
+	margin-top: 20px;
+}
+
+.accordian{
+	width: 100%;
+	margin: auto;
+	font-size: 18pt;
+	font-weight: bold;
+	background-color: #444;
+	text-align: center;
+	color: #ccc;
+	cursor: pointer;
+	padding: 15;
+	border: none;
+	outline: none;
+	transition: 0.3s;
+	height: 3em;
+}
+
+.active, .accordian:hover{
+	background-color: #888;
+}
+
+.panel{
+	padding: 0 18px;
+	background-color: white;
+	overflow:hidden;
+	max-height: 0;
+	transition: max-height 0.4s ease;
+}
+
+.panel img{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	margin-top: 20px;
+	box-shadow: 5px 5px 10px 4px #444; 
+}
+
+p {
+	font-size: 16pt;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+#Desc{
+	width: 70%;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+iframe{
+	display: block;
+	width: 55%;
+	margin: auto;
+	margin-top: 20px;
+}
+
+.CenterLink{
+	text-align: center;
+}
+
+.CanSue {
+	display:block;
+	max-width: 90%;
+}
+
+.MVC {
+	display:block;
+	max-width: 65%;
+}
+
+.FC {
+	display:block;
+	max-width: 40%;
+}
+
+.FM {
+	display:block;
+	max-width: 73%;
+}
+
+.Pitch {
+	display:block;
+	max-width: 68%;
+}
+
+.RNN{
+	display:block;
+	max-width: 80%;
+}
+
+.Temp{
+	display:block;
+	max-width: 75%;
+}
+
+.Py {
+	display:block;
+	max-width: 80%;
+}
+
+.Water{
+	display:block;
+	max-width: 65%;
+	margin-top: 10px;
+}
